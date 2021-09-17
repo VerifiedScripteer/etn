@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args) => {
                 menu.reply.send('Vragen over aanvragen worden niet beantwoord in een ticket. Bekijk ons mededelingen kanaal en je zult zien welke applicaties beschikbaar zijn. Lees onze faq goed door.', true)
                 break;
             case "Optie 2":
-                var categoryID = "888494660182495233";
+                var categoryID = "867101613725974549";
 
                 var userName = "ticket";
                 var userDiscriminator = message.author.id;
@@ -110,7 +110,7 @@ module.exports.run = async (client, message, args) => {
                 break;
             case "Optie 3":
 
-                var categoryID = "888494660182495233";
+                var categoryID = "867101613725974549";
 
                 var userName = "ticket";
                 var userDiscriminator = message.author.id;
@@ -163,7 +163,7 @@ module.exports.run = async (client, message, args) => {
                 break;
             case "Optie 4":
 
-                var categoryID = "883101906724085780";
+                var categoryID = "867101613725974549";
 
                 var userName = "klacht";
                 var userDiscriminator = message.author.id;
@@ -195,9 +195,28 @@ module.exports.run = async (client, message, args) => {
                                     READ_MESSAGE_HISTORY: true
                                 });
 
+                                settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.id === "867099452689612872"), {
+
+                                    VIEW_CHANNEL: false,
+                                    SEND_MESSAGES: false
+
+                                });
+
+                                settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.id === "867481061771313162"), {
+
+                                    VIEW_CHANNEL: true,
+                                    SEND_MESSAGES: true
+                                });
+
+                                settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === "Manager"), {
+
+                                    VIEW_CHANNEL: true,
+                                    SEND_MESSAGES: true
+                                });
+
                                 var embedParent = new discord.MessageEmbed()
                                     .setTitle(`Hallo! ${message.author.tag}`)
-                                    .setDescription(`Welkom bij je Ticket! Een medewerker van de afdelig personeelszaken neemt zo spoedig mogelijk contact met u op. Tickets kunnen gevoelige en intellectuele innerlijken bevatten. Zorg hier dus ook goed voor. Misbruik van dit systeem kan ernstige gevolgen hebben.`)
+                                    .setDescription(`Welkom bij je Ticket! Een medewerker van de afdelig personeelszaken neemt zo spoedig mogelijk contact met u op. Tickets kunnen gevoelige en intellectuele innerlijken bevatten. Zorg hier dus ook goed voor. Misbruik van dit systeem kan ernstige gevolgen hebben. \n\n **Reden aanmaken ticket:** Staff Klacht`)
                                     .setColor("#ffd500")
                                     .setTimestamp();
 
