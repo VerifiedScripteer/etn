@@ -47,8 +47,6 @@ module.exports.run = async (client, message, args) => {
             case "Optie 1":
                 const categoryID = "867101613725974549";
 
-                if (!message.member.hasPermission("MUTE_MEMBERS")) return message.reply("Jij kan dit niet doen");
-
                 var ticketLogs = message.guild.channels.cache.find(ch => ch.id === "867117350658113576");
 
                 if (message.channel.parentID == categoryID) {
