@@ -3,19 +3,6 @@ const { MessageMenuOption, MessageMenu } = require("discord-buttons");
 
 module.exports.run = async (client, message, args) => {
 
-    if (!message.member.hasPermission("MUTE_MEMBERS")) { 
-        
-        var embed = new discord.MessageEmbed()
-            .setTitle("Ontbrekende machtigingen")
-            .setDescription("Je hebt niet de juiste machtigingen om dit commando uit te voeren. Je hebt hiervoor de `MUTE_MEMBERS` permission nodig en deze hebben alleen `SUPPORT TEAM` leden. Excuses voor het ongemak.")
-            .setColor("RED")
-            .setTimestamp()
-            .setFooter("ERROR 154 | Den Haag Official");
-
-        return message.channel.send(embed);
-
-    }
-
     let option1 = new MessageMenuOption()
         .setLabel("Ticket Sluiten")
         .setValue("Optie 1")
