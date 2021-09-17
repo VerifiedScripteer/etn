@@ -98,6 +98,14 @@ module.exports.run = async (client, message, args) => {
                                 settedParent.send(embedParent);
                                 settedParent.send(`<@${message.author.id}>`);
 
+                                var embed = new discord.MessageEmbed()
+                                    .setTitle("Ticket Aangemaakt")
+                                    .setDescription(`Hallo ${message.author.tag}! Je ticket in ${message.guild.name} is succesvol aangemaakt. Check ${settedParent} om naar je ticket te gaan.`)
+                                    .setColor("GREEN")
+                                    .setTimestamp();
+
+                                message.channel.send(embed);
+
                             }
                         ).catch(err => {
                             message.channel.send("Er is iets misgelopen");
@@ -106,7 +114,7 @@ module.exports.run = async (client, message, args) => {
                 ).catch(err => {
                     message.channel.send("Er is iets misgelopen");
                 });
-                menu.reply.send(`Je ticket is succesvol aangemaakt. ${settedParent}`, true)
+                menu.reply.send(`Je ticket is succesvol aangemaakt.`, true)
                 break;
             case "Optie 3":
 
@@ -150,6 +158,14 @@ module.exports.run = async (client, message, args) => {
 
                                 settedParent.send(embedParent);
                                 settedParent.send(`<@${message.author.id}>`);
+
+                                var embed = new discord.MessageEmbed()
+                                    .setTitle("Ticket Aangemaakt")
+                                    .setDescription(`Hallo ${message.author.tag}! Je ticket in ${message.guild.name} is succesvol aangemaakt. Check ${settedParent} om naar je ticket te gaan.`)
+                                    .setColor("GREEN")
+                                    .setTimestamp();
+
+                                message.channel.send(embed);
 
                             }
                         ).catch(err => {
@@ -222,6 +238,14 @@ module.exports.run = async (client, message, args) => {
 
                                 settedParent.send(embedParent);
                                 settedParent.send(`<@${message.author.id}>`);
+
+                                var embed = new discord.MessageEmbed()
+                                    .setTitle("Ticket Aangemaakt")
+                                    .setDescription(`Hallo ${message.author.tag}! Je ticket in ${message.guild.name} is succesvol aangemaakt. Check ${settedParent} om naar je ticket te gaan.`)
+                                    .setColor("GREEN")
+                                    .setTimestamp();
+
+                                message.channel.send(embed);
 
                             }
                         ).catch(err => {
