@@ -78,6 +78,11 @@ module.exports.run = async (client, message, args) => {
                                     VIEW_CHANNEL: false
                                 });
 
+                                settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@Speler'), {
+                                    SEND_MESSAGES: false,
+                                    VIEW_CHANNEL: false
+                                });
+
                                 settedParent.updateOverwrite(message.author.id, {
                                     CREATE_INSTANT_INVITE: false,
                                     READ_MESSAGES: true,
@@ -139,6 +144,11 @@ module.exports.run = async (client, message, args) => {
                                     VIEW_CHANNEL: false
                                 });
 
+                                settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@Speler'), {
+                                    SEND_MESSAGES: false,
+                                    VIEW_CHANNEL: false
+                                });
+
                                 settedParent.updateOverwrite(message.author.id, {
                                     CREATE_INSTANT_INVITE: false,
                                     READ_MESSAGES: true,
@@ -196,6 +206,11 @@ module.exports.run = async (client, message, args) => {
                             (settedParent) => {
 
                                 settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@everyone'), {
+                                    SEND_MESSAGES: false,
+                                    VIEW_CHANNEL: false
+                                });
+
+                                settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@Speler'), {
                                     SEND_MESSAGES: false,
                                     VIEW_CHANNEL: false
                                 });
